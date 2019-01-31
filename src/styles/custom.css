@@ -1,0 +1,33 @@
+:root {
+  --color-grey: #EEE;
+  --color-grey-light: #F5F5F5;
+  --color-primary: #FFAB00;
+  --color-orange: #F97056;
+  --radius: 3px;
+}
+
+// Function
+@function remy($value, $base: 16px) {
+ @return ($value / $base) * 1rem;
+}
+
+// Mixins
+@mixin transition($prop: all, $duration: .25s, $timing: cubic-bezier(.4,0,1,1)) {
+ transition: $prop $duration $timing;
+}
+
+html {
+ box-sizing: border-box;
+ font-size: 16px;
+}
+
+*,
+*:after,
+*:before {
+ box-sizing: border-box;
+}
+
+body {
+ font: 100% 'Roboto', arial, sans-serif;
+ background:  var(--color-grey-light);
+}
